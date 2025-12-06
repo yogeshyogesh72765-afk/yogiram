@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CG Tourism - Modern</title>
+<link rel="stylesheet" href="assets/hindi6.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <div class="logo">CG</div>
+    <div>
+      <div style="font-weight:800">Chhattisgarh Tourism</div>
+      <div class="note">Explore 33 districts — Modern App Style</div>
+    </div>
+  </div>
+  <div class="nav">
+    <button class="toggle" id="darkToggle">🌙</button>
+    <a class="btn ghost" href="admin.html">Admin</a>
+    <a class="btn" href="#places">View Places</a>
+  </div>
+</header>
+
+<main class="container">
+  <aside class="sidebar">
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:8px">Discover</div>
+      <div class="muted">Top destinations, tribal culture, waterfalls & heritage</div>
+    </div>
+
+    <div class="card">
+      <input id="search" placeholder="Search places..." class="input">
+    </div>
+
+    <div class="card">
+      <div style="font-weight:700">Quick Actions</div>
+      <div class="note" style="margin-top:8px">Use admin panel to add/remove places</div>
+      <div style="margin-top:12px"><button class="btn" onclick="document.location='admin.html'">Open Admin</button></div>
+    </div>
+  </aside>
+
+  <section class="main">
+    <div class="slider card" id="slider">
+      <img id="slideImg" src="images/place_1.svg" alt="slide">
+      <div class="overlay">
+        <div style="font-size:22px;font-weight:800">Welcome to Chhattisgarh</div>
+        <div class="muted">Natural beauty • Culture • Heritage</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="font-weight:800">All Places</div>
+        <div class="muted" id="count"></div>
+      </div>
+    </div>
+
+    <div id="places" class="grid" aria-live="polite"></div>
+  </section>
+</main>
+
+<div class="footer">© 2025 CG Tourism — Built with ❤️. Dark Mode & Admin-ready.</div>
+
+<script src="assets/script6.js"></script>
+<script>
+initIndex();
+</script>
+</body>
+</html>
