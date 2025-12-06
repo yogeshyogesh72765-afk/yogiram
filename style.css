@@ -1,0 +1,94 @@
+/* style.css - Modern App Style (Version C) */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#7c3aed;
+  --glass: rgba(255,255,255,0.04);
+  --text:#e6eef6;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#071019 0%, #071427 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+
+/* Top nav */
+.header{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1200px;
+  margin:0 auto 18px;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.logo{
+  width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:white;
+  box-shadow: 0 6px 18px rgba(12,18,30,0.6);
+}
+.nav{
+  display:flex;gap:12px;align-items:center;
+}
+.btn{
+  background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:white;cursor:pointer;font-weight:600;
+  box-shadow:0 6px 18px rgba(124,58,237,0.16);
+}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.toggle{
+  background:var(--glass);border-radius:12px;padding:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.03)
+}
+
+/* layout */
+.container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns: 280px 1fr;gap:20px}
+.sidebar{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:var(--radius);min-height:400px;}
+.search{display:flex;gap:8px;margin-bottom:12px}
+.search input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:16px;border-radius:12px;margin-bottom:12px}
+.list-item{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);cursor:pointer}
+.list-item img{width:64px;height:48px;border-radius:8px;object-fit:cover}
+.main{}
+
+/* grid for places */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.place{
+  border-radius:12px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  display:flex;flex-direction:column;height:100%;
+}
+.place img{width:100%;height:160px;object-fit:cover}
+.place .pbody{padding:12px;display:flex;flex-direction:column;gap:8px;flex:1}
+.huge{font-size:18px;font-weight:700}
+.muted{color:var(--muted);font-size:13px}
+
+/* slider */
+.slider{position:relative;border-radius:12px;overflow:hidden;height:300px;margin-bottom:18px}
+.slider img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.85)}
+.slider .overlay{position:absolute;left:24px;bottom:24px;color:white}
+
+/* admin styles */
+.login-wrap{max-width:420px;margin:40px auto;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:20px;border-radius:14px}
+.input, textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);margin-top:8px}
+.row{display:flex;gap:8px}
+.small{width:110px}
+.file-preview{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.thumb{width:84px;height:64px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
+.footer{max-width:1200px;margin:24px auto 0;padding:18px;border-radius:12px;text-align:center;color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+
+/* responsive */
+@media(max-width:900px){
+  .container{grid-template-columns:1fr; padding:0 12px}
+  .header{padding:0 12px}
+}
