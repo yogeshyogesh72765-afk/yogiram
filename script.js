@@ -36,7 +36,7 @@ function initAdmin(){
 function doLogin(){
   const u = document.getElementById('adminUser').value.trim();
   const p = document.getElementById('adminPass').value.trim();
-  if (u === 'admin' && p === '12345') {
+  if (u === 'admin0214' && p === '0214Y') {
     localStorage.setItem('cg_admin_logged','1');
     showDashboard();
   } else {
