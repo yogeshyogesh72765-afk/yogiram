@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Panel</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+  <header class="site-header"><div class="brand">News Hub • Admin</div><a href="../index.html">View Site</a></header>
+  <main class="container">
+    <section class="admin-actions">
+      <h2>Publish News</h2>
+      <div class="form">
+        <input id="title" placeholder="Title">
+        <input id="category" placeholder="Category (e.g. Politics)">
+        <input id="image" placeholder="Image URL (optional)">
+        <textarea id="summary" placeholder="Short summary"></textarea>
+        <textarea id="content" placeholder="Full content (HTML allowed)"></textarea>
+        <div style="display:flex;gap:8px">
+          <button id="publish">Publish</button>
+          <button id="importSample">Import Sample</button>
+          <button id="logout">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-list">
+      <h3>All Posts</h3>
+      <div id="list"></div>
+    </section>
+  </main>
+  <script src="panel.js"></script>
+</body>
+</html>

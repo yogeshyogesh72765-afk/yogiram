@@ -1,70 +1,43 @@
 <!doctype html>
-<html lang="eng">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CG Tourism - Modern</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>News Hub — Demo</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="header">
-  <div class="brand">
-    <div class="logo">CG</div>
-    <div>
-      <div style="font-weight:800">Chhattisgarh Tourism</div>
-      <div class="note">Explore 33 districts — Modern App Style</div>
+  <header class="site-header">
+    <div class="brand">News Hub</div>
+    <div class="controls">
+      <input id="search" placeholder="Search news..." />
+      <select id="categoryFilter"><option value="">All Categories</option></select>
+      <button id="toggleTheme">Dark</button>
+      <a class="admin-link" href="admin/login.html">Admin</a>
     </div>
-  </div>
-  <div class="nav">
-    <button class="toggle" id="darkToggle">🌙</button>
-    <a class="btn ghost" href="admin.html">Admin</a>
-    <a class="btn" href="#places">View Places</a>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-  <aside class="sidebar">
-    <div class="card">
-      <div style="font-weight:700;margin-bottom:8px">Discover</div>
-      <div class="muted">Top destinations, tribal culture, waterfalls & heritage</div>
-    </div>
+  <main class="container">
+    <section class="hero">
+      <div id="heroSlider" class="slider"></div>
+    </section>
 
-    <div class="card">
-      <input id="search" placeholder="Search places..." class="input">
-    </div>
+    <section class="top-row">
+      <div class="posts" id="posts"></div>
+      <aside class="sidebar">
+        <h3>Trending</h3>
+        <ul id="trending"></ul>
+        <h3>Categories</h3>
+        <ul id="catList"></ul>
+      </aside>
+    </section>
 
-    <div class="card">
-      <div style="font-weight:700">Quick Actions</div>
-      <div class="note" style="margin-top:8px">Use admin panel to add/remove places</div>
-      <div style="margin-top:12px"><button class="btn" onclick="document.location='admin.html'">Open Admin</button></div>
-    </div>
-  </aside>
+    <nav class="pagination" id="pagination"></nav>
+  </main>
 
-  <section class="main">
-    <div class="slider card" id="slider">
-      <img id="slideImg" src="images/place_1.svg" alt="slide">
-      <div class="overlay">
-        <div style="font-size:22px;font-weight:800">Welcome to Chhattisgarh</div>
-        <div class="muted">Natural beauty • Culture • Heritage</div>
-      </div>
-    </div>
+  <footer class="site-footer">Demo News System • Frontend-only • Data in localStorage</footer>
 
-    <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <div style="font-weight:800">All Places</div>
-        <div class="muted" id="count"></div>
-      </div>
-    </div>
-
-    <div id="places" class="grid" aria-live="polite"></div>
-  </section>
-</main>
-
-<div class="footer">© 2025 CG Tourism — Built with ❤️. Dark Mode & Admin-ready.</div>
-
-<script src="script.js"></script>
-<script>
-initIndex();
-</script>
+  <script src="js/main.js"></script>
+  <script src="js/pagination.js"></script>
 </body>
 </html>

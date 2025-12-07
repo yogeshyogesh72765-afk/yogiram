@@ -1,10 +1,17 @@
+News Hub — Frontend-only News System
 
+Features:
+- Responsive frontend (index + blog pages)
+- Hero slider, Trending sidebar, Categories
+- Search + Pagination
+- Admin (login: admin / 123456) to Add/Edit/Delete posts (stored in localStorage)
+- Import sample posts for demo
 
-(A beautiful Hindi blog story)
+How to use:
+1. Unzip and serve on GitHub Pages or local server.
+2. Go to /admin/login.html (user: admin, pass: 123456) to publish posts.
+3. Posts are stored in browser localStorage. For persistence across devices, you need backend.
 
-छत्तीसगढ़…
-ये सिर्फ एक राज्य नहीं, बल्कि माटी की महक, संस्कृति की गर्माहट, और लोकगीतों की मधुर गूंज है।
-यहीं की धरती को लोग प्यार से कहते हैं — छत्तीसगढ़ महतारी, यानी हमारी जननी, हमारी धरती माँ।
-
-इस महतारी की गोद में जन्म लेने वाले लोग सादगी, मेहनत और अपनापन के प्रतीक माने जाते हैं।
-
+To run locally:
+python -m http.server 8000
+open http://localhost:8000
